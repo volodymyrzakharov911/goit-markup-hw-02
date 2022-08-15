@@ -2,21 +2,10 @@
   --primary-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
   --accent-color: #2196f3;
-
-  --primary-text-color-theme-dark: #9da4bd;
-  --secondary-text-color-theme-dark: #ffffff;
-  --primary-text-color-theme-light: #303030;
-  --secondary-text-color-theme-light: #555555;
-
-  background: #212121;
-  background: #757575;
-  background: #ffffff;
-  background: #eeeeee;
-  background: #000000;
-  background: #f5f4fa;
-  background: #ffffff99;
-  background: #2f303a;
-  background: #ececec;
+  --primary-text-color-theme-dark: #212121;
+  --secondary-text-color-theme-dark: #757575;
+  --primary-text-color-theme-light: #ffffff;
+  --secondary-text-color-theme-light: #f5f4fa;
 }
 
 /* Скидання стилів та часто вживані стилі */
@@ -34,7 +23,7 @@ img {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--primary-font);
 }
 
 button {
@@ -50,7 +39,7 @@ button {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .menu-link {
@@ -63,7 +52,7 @@ button {
 
 .menu-link:hover,
 .menu-link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .contact-mail,
@@ -79,7 +68,7 @@ button {
 .contact-phone:hover,
 .contact-mail:focus,
 .contact-phone:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .hero {
@@ -231,5 +220,5 @@ footer {
 .footer-phone-link:hover,
 .footer-mail-link:focus,
 .footer-phone-link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
