@@ -156,7 +156,7 @@ button {
 }
 
 .team {
-  color: var(--secondary-background-color-light);
+  background-color: var(--secondary-background-color-light);
 }
 
 .main-title-team {
