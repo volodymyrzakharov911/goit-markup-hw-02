@@ -2,10 +2,15 @@
   --primary-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
   --accent-color: #2196f3;
+  --accent-background-color: #188ce8;
+  --logo-secondary-color: #000000;
   --primary-text-color-theme-dark: #212121;
   --secondary-text-color-theme-dark: #757575;
   --primary-text-color-theme-light: #ffffff;
   --secondary-text-color-theme-light: #f5f4fa;
+  --primary-background-color-light: #ffffff;
+  --secondary-background-color-light: #f5f4fa;
+  --primary-background-color-dark: #2f303a;
 }
 
 /* Скидання стилів та часто вживані стилі */
@@ -24,11 +29,29 @@ img {
 
 body {
   font-family: var(--primary-font);
+  color: var(--primary-text-color-theme-dark);
+  background-color: var(--primary-background-color-light);
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
+}
+
+/* Приховування заголовків */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 /* Стилі шапки */
@@ -38,16 +61,22 @@ button {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+
+.logo-studio {
+  color: var(--logo-secondary-color);
+}
+
+.logo-footer {
+  color: var(--primary-text-color-theme-light);
 }
 
 .menu-link {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14x;
+  line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--primary-text-color-theme-dark);
 }
 
 .menu-link:hover,
@@ -55,13 +84,16 @@ button {
   color: var(--accent-color);
 }
 
+.current {
+  color: var(--accent-color);
+}
+
 .contact-mail,
 .contact-phone {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--secondary-text-color-theme-dark);
 }
 
 .contact-mail:hover,
@@ -72,17 +104,17 @@ button {
 }
 
 .hero {
-  background: #2f303a;
+  background: var(--primary-background-color-dark);
 }
 
 .main-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36x;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-text-color-theme-light);
 }
 
 .hero-btn {
@@ -93,13 +125,13 @@ button {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: #2196f3;
+  color: var(--primary-text-color-theme-light);
+  background-color: var(--accent-color);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background: #188ce8;
+  background: var(--accent-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -107,19 +139,24 @@ button {
 
 .title-advantage {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14px;
-  letter-spacing: 0.03em;
+  line-height: 1.14;
   text-transform: uppercase;
-  color: #212121;
 }
 
 .text-advantage {
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--secondary-text-color-theme-dark);
+}
+
+.main-title-about {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team {
+  color: var(--secondary-background-color-light);
 }
 
 .main-title-team {
@@ -127,8 +164,6 @@ button {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
 }
 
 .title-team {
@@ -136,21 +171,17 @@ button {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
 }
 
 .text-team {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--secondary-text-color-theme-dark);
 }
 
 .list-team-item {
-  background: #ffffff;
+  background: var(--primary-background-color-light);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -163,14 +194,12 @@ button {
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  background-color: #f5f4fa;
+  background-color: var(--secondary-background-color-light);
 }
 
 .filter-button:hover {
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color-theme-light);
 }
 
 .title-list-portfolio {
@@ -178,39 +207,31 @@ button {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--primary-text-color-theme-dark);
 }
 
 .text-list-portfolio {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--secondary-text-color-theme-dark);
 }
 
 /* Стилі підвалу */
 
 footer {
-  background-color: #2f303a;
+  background-color: var(--primary-background-color-dark);
 }
 
 .footer-map-link {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--primary-text-color-theme-light);
 }
 
 .footer-mail-link,
 .footer-phone-link {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
